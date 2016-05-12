@@ -1,7 +1,7 @@
 shopinfo:
-	title: FruitShop
+  title: FruitShop
 
 server:
-	port: 8070
+  port: 8070
 
 
