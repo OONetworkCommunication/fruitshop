@@ -5,9 +5,9 @@
     <title>Search results</title>
 </head>
 <body>
-<h1 th:text="shopName"/>
+<h1 th:text="${shopName}"/>
 <ul>
-    <li th:each="item : ${results}" th:text="${item}"><a href="/basket?add=" + </li>
+    <li th:each="item : ${results}" th:text="${item}">Item description here...</li>
 </ul>
 </body>
 </html>
