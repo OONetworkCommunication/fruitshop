@@ -1,0 +1,7 @@
+shopinfo:
+  title: FruitShop
+
+server:
+  port: 8070
+
+
