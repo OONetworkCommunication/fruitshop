@@ -3,4 +3,4 @@
       name: fruitshopConfig
     cloud:
       config:
-        uri: http://localhost:8888
+        uri: http://fruitshop:8888
