@@ -6,7 +6,7 @@
 </head>
 <body>
 <p th:text="'Number of cookies: ' + ${name} + '!'" />
-<h1>Fruit Shop Basket</h1>
+<h1 th:text="${shopName}"> Basket</h1>
 
 <ul>
     <li th:each="item : ${itemList}" th:text="${item}">Item description here...</li>
