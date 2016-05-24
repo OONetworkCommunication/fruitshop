@@ -8,3 +8,16 @@ spring:
           uri: https://github.com/OONetworkCommunication/fruitshopConfig.git
 server:  
   port: 8888 
+---
+spring:
+  profiles: development
+  application:
+    name: fruitshopConfig
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/OONetworkCommunication/fruitshopConfig.git
+server:
+  port: 7777
+
