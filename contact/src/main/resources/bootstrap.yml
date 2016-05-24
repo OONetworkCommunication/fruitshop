@@ -1,6 +1,6 @@
-spring:
-  application:
-        name: contact
-  cloud:
-    config:
-      uri: http://localhost:8888
+  spring:
+    application:
+      name: fruitshopConfig
+    cloud:
+      config:
+        uri: http://localhost:8888
