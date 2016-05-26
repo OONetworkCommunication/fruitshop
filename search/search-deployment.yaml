@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: search
+    visualize: "true"
+  name: search
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: search
+      visualize: "true"
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: search
+        visualize: "true"
+    spec:
+      containers:
+      - image: bilalkais/search
+        name: search
+        resources: {}
+status: {}

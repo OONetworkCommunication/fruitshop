@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: contact
+    visualize: "true"
+  name: contact
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: contact
+      visualize: "true"
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: contact
+        visualize: "true"
+    spec:
+      containers:
+      - image: bilalkais/contact
+        name: contact
+        resources: {}
+status: {}

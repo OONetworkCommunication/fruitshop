@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: homepage
+    visualize: "true"
+  name: homepage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: homepage
+      visualize: "true"
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: homepage
+        visualize: "true"
+    spec:
+      containers:
+      - image: bilalkais/homepage
+        name: homepage
+        resources: {}
+status: {}

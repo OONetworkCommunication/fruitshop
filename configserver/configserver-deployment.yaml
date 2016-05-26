@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: configserver
+    visualize: "true"
+  name: configserver
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      run: configserver
+      visualize: "true"
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: configserver
+        visualize: "true"
+    spec:
+      containers:
+      - image: bilalkais/configserver
+        name: configserver
+        resources: {}
+status: {}
