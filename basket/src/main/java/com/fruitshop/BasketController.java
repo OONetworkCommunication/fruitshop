@@ -30,31 +30,11 @@ public class BasketController {
     String shopTitle;
 
     @RequestMapping("/basket")
-    public String basket(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model){
-        CookieManager cm = new CookieManager();
-        List<HttpCookie> cookies = cm.getCookieStore().getCookies();
-        List<String> itemList = new ArrayList<String>();
+    public String basket(Model model){
 
-        for(HttpCookie item : cookies) {
-            itemList.add(item.getValue());
-        }
-
-        model.addAttribute("name", String.valueOf(cookies.size()));
-        model.addAttribute("itemList",itemList);
-        model.addAttribute("shopName",shopTitle);
+        model.addAttribute("title",shopTitle);
 
         return "basket";
     }
 
-    @RequestMapping(value ="/basket", params = {"add"}, method = RequestMethod.GET)
-    public String basket(@RequestParam(value = "add") String item, HttpServletResponse response, Model model) {
-        CookieManager cm = new CookieManager();
-        cm.setCookiePolicy(CookiePolicy.ACCEPT_ALL);
-        CookieHandler.setDefault(cm);
-
-        List<HttpCookie> cookies = cm.getCookieStore().getCookies();
-        response.addCookie(new Cookie(String.valueOf(cookies.size()), item));
-
-        return "basket";
-    }
 }

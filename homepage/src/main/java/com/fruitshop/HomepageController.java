@@ -3,6 +3,7 @@ package com.fruitshop;
 import groovy.lang.Grab;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RefreshScope
 @Component
 @Controller
+@EnableZuulProxy
 public class HomepageController {
 
         @Value("${shopinfo.title}")

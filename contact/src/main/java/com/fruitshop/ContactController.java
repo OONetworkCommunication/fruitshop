@@ -16,10 +16,10 @@ public class ContactController {
 
     @Value("${shopinfo.title}")
     String shopTitle;
-    @RequestMapping("/contact")
-    public String contact(@RequestParam(value="name", required=false, defaultValue="Contact") String name, Model model) {
-        model.addAttribute("name", shopTitle);
 
+    @RequestMapping("/contact")
+    public String contact(Model model) {
+        model.addAttribute("title", shopTitle);
         return "contact";
     }
 }

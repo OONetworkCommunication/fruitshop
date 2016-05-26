@@ -1,6 +1,4 @@
 spring:  
-  application:
-    name: fruitshopConfig
   cloud:
     config:
       server:
@@ -11,8 +9,6 @@ server:
 ---
 spring:
   profiles: development
-  application:
-    name: fruitshopConfig
   cloud:
     config:
       server:

@@ -26,6 +26,7 @@ public class SearchController {
 
     public static List<String> fruits;
 
+
     public SearchController() {
         fruits = new ArrayList<>();
         fruits.add("Banana");
@@ -34,7 +35,7 @@ public class SearchController {
         fruits.add("Orange");
         fruits.add("Lemon");
         fruits.add("Blueberry");
-        fruits.add("strawberry");
+        fruits.add("Strawberry");
     }
 
     @RequestMapping(value ="/search", params = {"w"}, method = RequestMethod.GET)
@@ -46,7 +47,7 @@ public class SearchController {
             }
         }
         model.addAttribute("results",results);
-        model.addAttribute("shopName",shopTitle);
+        model.addAttribute("title", shopTitle);
         return "search";
     }
 }

@@ -1,16 +1,14 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>FruitShop - We Banana your Life</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<p th:text="'Number of cookies: ' + ${name} + '!'" />
-<h1 th:text="${shopName}"> Basket</h1>
+<h1 th:text="${title}" />
+<h2>Fruit basket</h2>
 
-<ul>
-    <li th:each="item : ${itemList}" th:text="${item}">Item description here...</li>
-</ul>
+<p>No items in the basket!</p>
 
 </body>
 
